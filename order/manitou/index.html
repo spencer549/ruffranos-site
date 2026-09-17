@@ -794,27 +794,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 #design-a .ip-pie__sl b{font-family:var(--disp); font-weight:700; color:var(--red-ink); margin-left:3px}
 #design-a .ip-board2{padding:clamp(34px,4vw,56px) 0; background:#faf8f4; border-top:1px solid var(--line)}
 #design-a .ip-mcards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px;
-  align-items:stretch}
-#design-a .ip-mcard .ip-mcard__ph{position:relative; flex:1 1 auto; min-height:200px; aspect-ratio:auto}
-#design-a .ip-mcard .ip-mcard__ph img{position:absolute; inset:0}
-#design-a .ip-mcard__b{flex:none}
-#design-a .ip-board2--dark{background:var(--ink); border-top:0}
-#design-a .ip-board2:not(.ip-board2--dark){background:#fff}
-#design-a .ip-board2--dark .ip-mcard{border-color:transparent}
-#design-a .ip-sec--dark{background:var(--ink); border-top-color:transparent}
-#design-a .ip-sec + .ip-sec--dark,#design-a .ip-sec--dark + .ip-sec{border-top-color:transparent}
-#design-a .ip-sec--dark h2{color:#fff}
-#design-a .ip-sec--dark .ip-sec__note{color:#cfd4d1}
-#design-a .ip-sec--dark .ip-storeline{color:var(--gold)}
-#design-a .ip-sec--dark .ip-pies__hd{border-bottom-color:rgba(255,255,255,.55)}
-#design-a .ip-sec--dark .ip-pies__hd > span{color:#fff}
-#design-a .ip-sec--dark .ip-pie,#design-a .ip-sec--dark .ip-mi{border-bottom-color:rgba(255,255,255,.16)}
-#design-a .ip-sec--dark .ip-mi__n{color:#fff}
-#design-a .ip-sec--dark .ip-mi__d,#design-a .ip-sec--dark .ip-pie__na{color:#b9c0bc}
-#design-a .ip-sec--dark .ip-pie__c,#design-a .ip-sec--dark .ip-mi__p{color:var(--gold)}
-#design-a .ip-sec--dark .ip-sec__ph{background:var(--ink-2)}
-#design-a .ip-sec,#design-a .ip-board2{position:relative; overflow-x:clip}
-#design-a .ip-sec > .wrap,#design-a .ip-board2 > .wrap{position:relative; z-index:1}
+  align-items:start}
 #design-a .ip-float{position:absolute; z-index:0; top:var(--top,16%); width:var(--fw,260px); height:auto;
   pointer-events:none; filter:drop-shadow(0 18px 22px rgba(0,0,0,.30));
   animation:ipFloat 6.5s var(--ease-in-out) infinite alternate}
@@ -822,7 +802,6 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 #design-a .ip-float--r{right:calc((100% - 1200px) / 2 - 28px - var(--fw,260px)); --rot:8deg}
 @keyframes ipFloat{from{transform:translateY(-7px) rotate(var(--rot))}
   to{transform:translateY(9px) rotate(var(--rot))}}
-@media (max-width:1180px){ #design-a .ip-sec .ip-float,#design-a .ip-board2 .ip-float{display:none} }
 @media (prefers-reduced-motion: reduce){
   html:not([data-motion="force"]) #design-a .ip-float{animation:none; transform:rotate(var(--rot))}
 }
@@ -1063,7 +1042,6 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   #design-a .ip-sec__ph{aspect-ratio:16/8; margin-bottom:12px}
   #design-a .ip-mi{gap:6px 14px}
   #design-a .ip-mcards{grid-template-columns:minmax(0,1fr)}
-  #design-a .ip-mcard .ip-mcard__ph{flex:none; min-height:0; aspect-ratio:16/9}
   #design-a .ip-pies__hd,#design-a .ip-pie{grid-template-columns:minmax(0,1fr) 62px 62px; gap:0 8px}
   #design-a .ip-pie__c{font-size:18px}
   #design-a .ip-mi__n{font-size:17.5px}
