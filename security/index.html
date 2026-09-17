@@ -952,9 +952,11 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 }
 #design-a .ip-spread{position:relative; overflow:hidden; background:var(--ink);
   min-height:clamp(300px,34vw,460px); display:grid; align-items:end}
-#design-a .ip-spread > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+#design-a .ip-spread > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  object-position:center 42%}
 #design-a .ip-spread__cap{position:relative; z-index:1; background:var(--ink); color:var(--cream);
-  max-width:520px; padding:20px 24px; margin:0 0 clamp(20px,3vw,40px) max(20px,calc((100% - 1200px)/2))}
+  max-width:520px; padding:20px 24px; justify-self:end;
+  margin:0 max(20px,calc((100% - 1200px)/2)) clamp(20px,3vw,40px) 0}
 #design-a .ip-spread__cap h2{font-size:clamp(26px,2.6vw,36px); color:#fff; margin-bottom:6px}
 #design-a .ip-others{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
 #design-a .ip-other{display:grid; grid-template-columns:170px minmax(0,1fr); border:2px solid var(--line);
@@ -1048,6 +1050,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   #design-a .ip-spread{display:block; min-height:0}
   #design-a .ip-spread > img{position:relative; height:220px}
   #design-a .ip-spread__cap{margin:0; max-width:none}
+  #design-a .ip-spread > img{object-position:30% 50%}
   #design-a .ip-others{grid-template-columns:minmax(0,1fr)}
   #design-a .ip-other{grid-template-columns:120px minmax(0,1fr)}
 }
@@ -1145,7 +1148,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
     </div>
   </section>
   <section class="ip-spread">
-    <img src="https://ruffranoshellskitchenpizza.com/wp-content/uploads/2025/10/HKP-156-rotated.jpg" alt="An overhead table of slices, calzones, garlic knots with marinara, buffalo wings, a Greek salad and bottled drinks on a red and black checkered tablecloth." loading="lazy" decoding="async">
+    <img src="../assets/photos/oven_in-1600.jpg" srcset="../assets/photos/oven_in-800.jpg 800w, ../assets/photos/oven_in-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 50vw" alt="A pie on a wooden peel going into the deck oven, the oven mouth glowing behind it." loading="lazy" decoding="async"  width="1600" height="1067">
     <div class="ip-spread__cap reveal">
       <h2>Eat Here or Order Ahead</h2>
       <p>Take a seat in Security-Widefield, or order online and pick it up when it is ready.</p>
