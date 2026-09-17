@@ -349,10 +349,14 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 #design-a .hero__l{max-width:585px; display:flex; flex-direction:column;
   justify-content:center; width:100%}
 #design-a .hero h1{font-size:clamp(40px,5.6vw,74px); color:#fff; margin-bottom:10px}
+#design-a .hero h1 .hl{color:var(--gold)}
+@media (min-width:861px){
+  #design-a .hero h1{white-space:nowrap; width:max-content; max-width:none}
+}
 #design-a .hero h1 .w{display:inline-block; animation:aRise .62s var(--ease-reveal) both}
-#design-a .hero h1 .w:nth-child(2){animation-delay:70ms}
-#design-a .hero h1 .w:nth-child(3){animation-delay:140ms}
-#design-a .hero h1 .w:nth-child(4){animation-delay:210ms}
+#design-a .hero h1 .w:nth-of-type(2){animation-delay:70ms}
+#design-a .hero h1 .w:nth-of-type(3){animation-delay:140ms}
+#design-a .hero h1 .w:nth-of-type(4){animation-delay:210ms}
 @keyframes aRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 #design-a .hero__sub{font-size:17px; color:var(--cream); max-width:48ch;
   animation:aFade .5s var(--ease-out) 280ms both}
@@ -606,7 +610,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   #design-a .mi{padding:6px 0}
   #design-a .mi__n{font-size:15px}
   #design-a .mi__d{font-size:12.5px}
-  #design-a .hero h1{font-size:clamp(32px,8.6vw,48px)}
+  #design-a .hero h1{font-size:clamp(30px,8.6vw,48px)}
   #design-a .about__g{display:block}
   #design-a .pick__row{gap:6px}
   #design-a .pick__b{padding:9px 10px}
@@ -1150,7 +1154,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
        aria-label="A pepperoni and jalapeno pizza baking on the deck of the wood-fired oven at Ruffrano's, the burner flame alight along the wall behind it." data-herovideo
        data-webm="assets/video/hero-1280.webm" data-mp4="assets/video/hero-1280.mp4"></video><img class="hero__still" src="assets/video/hero-poster.jpg" alt="A pepperoni and jalapeno pizza baking on the deck of the wood-fired oven at Ruffrano's, the burner flame alight along the wall behind it." decoding="async" width="1280" height="720"></div>
     <div class="hero__in"><div class="hero__l">
-      <h1><span class="w">New&nbsp;</span><span class="w">York-Style&nbsp;</span><span class="w">Pizza&nbsp;</span><span class="w">in&nbsp;</span><span class="w">Colorado&nbsp;</span><span class="w">Springs&nbsp;</span></h1>
+      <h1><span class="w hl">New&nbsp;</span><span class="w hl">York-Style&nbsp;</span><span class="w hl">Pizza&nbsp;</span><br class="h1br"><span class="w">in&nbsp;</span><span class="w">Colorado&nbsp;</span><span class="w">Springs&nbsp;</span></h1>
       <p class="hero__sub">Order slices, whole pizzas, calzones and more for pickup in
          Manitou Springs, Cheyenne Mountain or Security-Widefield. Choose your location to
          get started.</p>
