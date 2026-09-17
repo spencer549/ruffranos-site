@@ -525,23 +525,33 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 #design-a .team{padding-block:clamp(24px,3vw,44px)}
 #design-a .team__b{padding:clamp(24px,3vw,46px) 0 clamp(24px,3vw,46px)
   clamp(24px,3.2vw,48px); display:flex; flex-direction:column; justify-content:center}
+#design-a .team__im, #design-a .about__g{
+  --mh:linear-gradient(90deg,transparent 0,transparent var(--mc),rgba(0,0,0,0.08) calc(var(--mc) + var(--md) * 0.12),rgba(0,0,0,0.24) calc(var(--mc) + var(--md) * 0.25),rgba(0,0,0,0.46) calc(var(--mc) + var(--md) * 0.40),rgba(0,0,0,0.68) calc(var(--mc) + var(--md) * 0.55),rgba(0,0,0,0.86) calc(var(--mc) + var(--md) * 0.70),rgba(0,0,0,0.96) calc(var(--mc) + var(--md) * 0.85),#000 calc(var(--mc) + var(--md)))}
+#design-a .team__im img, #design-a .about__g img{
+  -webkit-mask-image:var(--mh),var(--mv); -webkit-mask-composite:source-in;
+  mask-image:var(--mh),var(--mv); mask-composite:intersect; border-radius:0}
 @media (min-width:861px){
-  #design-a .team{--tf:clamp(40px,5vw,80px)}
-  #design-a .team__im{margin-right:calc(-1 * var(--tf))}
-  #design-a .team__b{padding-left:calc(clamp(24px,3.2vw,48px) + var(--tf) / 2)}
-  #design-a .team__im img{
-    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - var(--tf)),transparent 100%),
-      linear-gradient(180deg,transparent 0,#000 6%,#000 85%,transparent 100%);
-    -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(90deg,#000 calc(100% - var(--tf)),transparent 100%),
-      linear-gradient(180deg,transparent 0,#000 6%,#000 85%,transparent 100%);
-    mask-composite:intersect}
+  #design-a .team{--tf:clamp(90px,11vw,190px); grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+  #design-a .team__im{order:2; margin-left:calc(-1 * var(--tf));
+    --mc:calc(var(--tf) * .6); --md:calc(var(--tf) * 2.1);
+    --mv:linear-gradient(180deg,transparent 0,rgba(0,0,0,.18) 3%,rgba(0,0,0,.45) 6.5%,rgba(0,0,0,.75) 10%,rgba(0,0,0,.93) 13%,#000 16%,#000 82%,rgba(0,0,0,.5) 92%,transparent 100%)}
+  #design-a .team__b{order:1; padding-right:calc(var(--tf) * .4 + 16px)}
 }
-@media (min-width:861px) and (max-width:1180px){ #design-a .team > .ct{display:none} }
 @media (max-width:860px){
-  #design-a .team__im img{
-    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 6%,#000 70%,transparent 100%);
-    mask-image:linear-gradient(180deg,transparent 0,#000 6%,#000 70%,transparent 100%)}
+  #design-a .team__im{--mh:linear-gradient(#000,#000);
+    --mv:linear-gradient(180deg,transparent 0,rgba(0,0,0,.6) 3%,#000 8%,#000 66%,rgba(0,0,0,.45) 84%,transparent 100%)}
+}
+#design-a .band--about{container-type:inline-size}
+@media (min-width:861px){
+  #design-a .about{--af:clamp(70px,7.5vw,120px)}
+  #design-a .about__g{margin-left:calc(-1 * var(--af));
+    margin-right:calc(-1 * max(20px, (100cqw - 1200px) / 2));
+    --mc:calc(var(--af) * .65); --md:calc(var(--af) * 2.2);
+    --mv:linear-gradient(180deg,transparent 0,rgba(0,0,0,.5) 4%,#000 11%,#000 84%,rgba(0,0,0,.5) 93%,transparent 100%)}
+}
+@media (max-width:860px){
+  #design-a .about__g{margin-inline:-20px; --mh:linear-gradient(#000,#000);
+    --mv:linear-gradient(180deg,transparent 0,rgba(0,0,0,.55) 4%,#000 12%,#000 84%,rgba(0,0,0,.5) 93%,transparent 100%)}
 }
 @media (min-width:861px){
   #design-a .team__b .h2{white-space:nowrap; font-size:clamp(30px,3.05vw,44px)}
