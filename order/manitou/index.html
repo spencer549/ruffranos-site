@@ -822,7 +822,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 #design-a .ip-float--r{right:calc((100% - 1200px) / 2 - 28px - var(--fw,260px)); --rot:8deg}
 @keyframes ipFloat{from{transform:translateY(-7px) rotate(var(--rot))}
   to{transform:translateY(9px) rotate(var(--rot))}}
-@media (max-width:1180px){ #design-a .ip-float{display:none} }
+@media (max-width:1180px){ #design-a .ip-sec .ip-float,#design-a .ip-board2 .ip-float{display:none} }
 @media (prefers-reduced-motion: reduce){
   html:not([data-motion="force"]) #design-a .ip-float{animation:none; transform:rotate(var(--rot))}
 }
@@ -956,7 +956,11 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   background:var(--cream); border-bottom:1px solid var(--line)}
 #design-a .ip-embed__fr::after{content:""; position:absolute; left:0; right:0; bottom:0; height:120px;
   background:linear-gradient(180deg,rgba(255,255,255,0),#fff); pointer-events:none}
-#design-a .ip-embed__fr{position:relative; width:min(1160px,100%); margin-inline:auto; min-height:900px}
+#design-a .ip-embed{position:relative; overflow-x:clip}
+#design-a .ip-embed__fr{position:relative; z-index:1; width:min(900px,100%); margin-inline:auto; min-height:900px}
+#design-a .ip-embed .ip-float--l{left:calc((100% - 900px) / 2 - 26px - var(--fw,240px))}
+#design-a .ip-embed .ip-float--r{right:calc((100% - 900px) / 2 - 26px - var(--fw,240px))}
+@media (max-width:1100px){ #design-a .ip-embed .ip-float{display:none} }
 #design-a .ip-embed__fr img{width:100%; height:auto}
 #design-a .ip-orderother__in{display:flex; justify-content:space-between; align-items:center; gap:20px;
   flex-wrap:wrap}
@@ -1162,6 +1166,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   </section>
   <p class="ip-pickup">Online orders from this page are for pickup at 9 Ruxton Ave.</p>
   <section class="ip-embed" aria-label="Online ordering">
+    <img class="ip-float ip-float--l" src="../../assets/cutouts/slice_knots_2-600.webp" srcset="../../assets/cutouts/slice_knots_2-600.webp 600w, ../../assets/cutouts/slice_knots_2-1200.webp 1200w" sizes="240px" alt="" aria-hidden="true" loading="lazy" decoding="async" style="--top:5%; --fw:240px" width="600" height="389"><img class="ip-float ip-float--r" src="../../assets/cutouts/stromboli_cut-600.webp" srcset="../../assets/cutouts/stromboli_cut-600.webp 600w, ../../assets/cutouts/stromboli_cut-1200.webp 1200w" sizes="240px" alt="" aria-hidden="true" loading="lazy" decoding="async" style="--top:24%; --fw:240px" width="600" height="405"><img class="ip-float ip-float--l" src="../../assets/cutouts/wings_basket-600.webp" srcset="../../assets/cutouts/wings_basket-600.webp 600w, ../../assets/cutouts/wings_basket-1200.webp 1200w" sizes="240px" alt="" aria-hidden="true" loading="lazy" decoding="async" style="--top:47%; --fw:240px" width="600" height="239"><img class="ip-float ip-float--r" src="../../assets/cutouts/cannoli-600.webp" srcset="../../assets/cutouts/cannoli-600.webp 600w, ../../assets/cutouts/cannoli-1200.webp 1200w" sizes="230px" alt="" aria-hidden="true" loading="lazy" decoding="async" style="--top:70%; --fw:230px" width="600" height="411">
     <p class="ip-embed__tag"><b>Design preview.</b> This is the store&rsquo;s real ordering menu, so an order placed below is a real order.</p>
     <div class="ip-embed__fr ip-embed__fr--live"><iframe src="https://ezoo.app/ruffranosmanitou?brand=e01c00&amp;bg=ffffff&amp;fg=202725&amp;font=Barlow%2C%20-apple-system%2C%20BlinkMacSystemFont%2C%20%22Segoe%20UI%22%2C%20Roboto%2C%20Arial%2C%20sans-serif" title="Online ordering, Manitou Springs" loading="eager" allow="payment"></iframe></div>
   </section>

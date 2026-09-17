@@ -822,7 +822,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 #design-a .ip-float--r{right:calc((100% - 1200px) / 2 - 28px - var(--fw,260px)); --rot:8deg}
 @keyframes ipFloat{from{transform:translateY(-7px) rotate(var(--rot))}
   to{transform:translateY(9px) rotate(var(--rot))}}
-@media (max-width:1180px){ #design-a .ip-float{display:none} }
+@media (max-width:1180px){ #design-a .ip-sec .ip-float,#design-a .ip-board2 .ip-float{display:none} }
 @media (prefers-reduced-motion: reduce){
   html:not([data-motion="force"]) #design-a .ip-float{animation:none; transform:rotate(var(--rot))}
 }
@@ -956,7 +956,11 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   background:var(--cream); border-bottom:1px solid var(--line)}
 #design-a .ip-embed__fr::after{content:""; position:absolute; left:0; right:0; bottom:0; height:120px;
   background:linear-gradient(180deg,rgba(255,255,255,0),#fff); pointer-events:none}
-#design-a .ip-embed__fr{position:relative; width:min(1160px,100%); margin-inline:auto; min-height:900px}
+#design-a .ip-embed{position:relative; overflow-x:clip}
+#design-a .ip-embed__fr{position:relative; z-index:1; width:min(900px,100%); margin-inline:auto; min-height:900px}
+#design-a .ip-embed .ip-float--l{left:calc((100% - 900px) / 2 - 26px - var(--fw,240px))}
+#design-a .ip-embed .ip-float--r{right:calc((100% - 900px) / 2 - 26px - var(--fw,240px))}
+@media (max-width:1100px){ #design-a .ip-embed .ip-float{display:none} }
 #design-a .ip-embed__fr img{width:100%; height:auto}
 #design-a .ip-orderother__in{display:flex; justify-content:space-between; align-items:center; gap:20px;
   flex-wrap:wrap}
@@ -1175,7 +1179,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
         </p>
       </div>
       <div class="about__g reveal d1">
-        <img src="assets/photos/cook_cut-1600.jpg" srcset="assets/photos/cook_cut-800.jpg 800w, assets/photos/cook_cut-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 50vw" alt="A cook in a red apron cutting a pie on the counter." class="ph-fill" loading="lazy" decoding="async"  width="1600" height="1067">
+        <img src="https://ruffranoshellskitchenpizza.com/wp-content/uploads/2025/09/2.jpg" alt="The dining room, walls painted with red flames, framed black and white photographs above." class="ph-fill" width="2048" height="1366" loading="lazy" decoding="async" >
       </div>
     </div>
   </section>
@@ -1270,7 +1274,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   </section>
   <section class="team hascut hascut--r">
     <img class="ct ct--br" src="assets/cutouts/knots_basket_2-1200.webp" srcset="assets/cutouts/knots_basket_2-600.webp 600w, assets/cutouts/knots_basket_2-1200.webp 1200w, assets/cutouts/knots_basket_2-2000.webp 2000w" sizes="(max-width:860px) 250px, 560px" alt="" aria-hidden="true" loading="lazy" decoding="async" style="--cw:330px;--up:70px;--in:70px" width="1200" height="907">
-    <div class="team__im reveal"><img src="assets/photos/cook_cut-1600.jpg" srcset="assets/photos/cook_cut-800.jpg 800w, assets/photos/cook_cut-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 50vw" alt="A cook in a red apron cutting a pie on the counter." loading="lazy" decoding="async"  width="1600" height="1067"></div>
+    <div class="team__im reveal"><img src="assets/photos/oven_peel-1600.jpg" srcset="assets/photos/oven_peel-800.jpg 800w, assets/photos/oven_peel-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 50vw" alt="A peel at the open oven door, the red oven front filling the frame." loading="lazy" decoding="async"  width="1600" height="1067"></div>
     <div class="team__b reveal d1"
          style="padding-right:max(20px,calc((100vw - 1200px)/2))">
       <p class="eyebrow">Our Team</p>
