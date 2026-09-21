@@ -405,13 +405,15 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   #design-a .about__g{min-height:270px}
   #design-a .about__g > .ct{left:auto; right:3%; bottom:-9%}
 }
-#design-a .about__cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
-#design-a .about__cta a{font-family:var(--disp); font-weight:600; font-size:14px;
-  letter-spacing:.09em; text-transform:uppercase; text-decoration:none; color:var(--ink);
-  border-bottom:2px solid var(--red); padding-bottom:3px;
-  transition:color 160ms var(--ease-out)}
+#design-a .cta-row--solo{display:block; margin-top:22px}
+#design-a .btn--wide{padding:17px 34px; font-size:18px}
+#design-a .btn--wide svg{flex:0 0 auto}
+#design-a .about__sub{margin:12px 0 0; font-size:15px; color:var(--mut)}
+#design-a .about__sub a{color:var(--red-ink); font-weight:600;
+  text-decoration:underline; text-underline-offset:3px;
+  text-decoration-thickness:2px; text-decoration-color:var(--red)}
 @media (hover:hover) and (pointer:fine){
-  #design-a .about__cta a:hover{color:var(--red-ink)}
+  #design-a .about__sub a:hover{color:var(--red-d)}
 }
 #design-a .diet{margin-top:16px; border-left:3px solid var(--red); padding-left:14px;
   font-size:15px; color:var(--mut)}
@@ -620,7 +622,7 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
   #design-a .about,#design-a .team{grid-template-columns:1fr}
   #design-a .team__im{min-height:0; aspect-ratio:16/9}
   #design-a .team__b{padding:20px 20px 4px !important}
-  #design-a .about__cta{margin-top:14px}
+  #design-a .cta-row--solo{margin-top:16px}
   #design-a .locs{grid-template-columns:1fr; row-gap:18px; grid-template-rows:none}
   #design-a .loc{display:flex; flex-direction:column; grid-row:auto}
   #design-a .loc__b{display:flex; flex-direction:column; grid-row:auto}
@@ -636,8 +638,8 @@ html.ctjs .design .ct.is-in, html.ctjs .design .ct.is-settled{opacity:1}
 @media (max-width:860px){
   #design-a .hd .tel{min-height:44px; display:inline-flex; align-items:center; padding:0 4px}
   #design-a .loc .tel{min-height:44px; display:inline-flex; align-items:center}
-  #design-a .about__cta a{min-height:44px; display:inline-flex; align-items:center;
-    padding:0 2px}
+  #design-a .btn--wide{width:100%; min-height:54px}
+  #design-a .about__sub a{min-height:44px; display:inline-flex; align-items:center}
   #design-a .pick__note a{min-height:44px; display:inline-flex; align-items:center}
   #design-a .btn--out{min-height:44px}
   #design-a .sticky a.tel{min-height:44px; display:inline-flex; align-items:center}
